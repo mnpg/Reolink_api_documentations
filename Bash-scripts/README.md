@@ -122,7 +122,7 @@ Here the method how to create several video clip zones and how to apply one of t
 
 ### HOW TO DISPLAY THE VIDEO CLIP : 
 
-There are 2 methods possibles to see the viceo clip zoom live stream :
+There are 2 methods possibles to see the video clip zoom live stream :
  - HTTP or HTTPS Url
 > `http(s)://#IP#/flv?port=1935&app=bcs&stream=channel0_mobile.bcs&user=#username#&password=#password#` \
 > (Remplace #IP#, #username#, #password# by your own values)
