@@ -43,7 +43,7 @@ Here the method how to create several privacy masks and how to apply a new priva
 >Launch, after that previous command, the command dedicated to apply the privacy mask file for id:2 : \
 >`./rl-api SetMask $(cat json_mask_id2)`
 
-**IMPORTANT :** all the files json_mask_id**X** are located in the same repository of the rl-api.sh executable. 
+**IMPORTANT :** all the files json_mask_id**X** are located in the same repository of the rl-api executable. 
 
 ----
 
