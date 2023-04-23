@@ -112,10 +112,10 @@ Here the method how to create several video clip zones and how to apply one of t
 **Example :** Here, i want to focus on two particular sectors of the main image (zone1 : Front door, zone2 : Letter box)
 
 >- For the first one (front door) which your have defined a video clip zone, launch the command bellow and save the result in a file called, for example, json_clip_frontdoor : \
->./rl-api.sh GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_frontdoor
+>`./rl-api.sh GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_frontdoor`
 >
 >- For the second one (letter box), modify the sector you want to see and apply it. After that, launch the command to saved the result in a second file called json_clip_letterbox : \
->./rl-api.sh GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_letterbox
+>`./rl-api.sh GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_letterbox`
 >
 >When there is an event (doorbell ringing > view frontdoor zoom), launch the command dedicated to apply the json_clip_frontdoor file for zooming to the frontdoor: \
 >`./rl-api.sh SetCrop $(cat json_clip_frontdoor)`
