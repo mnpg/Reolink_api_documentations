@@ -2,7 +2,7 @@
 
 All the examples below are created with the @jasonk **rl-api** bash script (for linux), **which it's an awesome script and many thanks for him**!
 
-These examples are pretty useful when you can't define or configure some parmeters (or features) through your Home Automation Solution.
+These examples are pretty useful when you can't define or configure some parameters (or features) through your Home Automation Solution.
 
 **!! THESE EXAMPLES WORK ONLY WITH REOLINK CAMERAS WITH CGI/API SUPPORT !!** \
 Please, take a look at the specifications of your camera on the Reolink official website
