@@ -4,15 +4,23 @@ All the examples below are created with the @jasonk **rl-api** bash script (for 
 
 These examples are pretty useful when you can't define or configure some parmeters (or features) through your Home Automation Solution.
 
+**!! THESE EXAMPLES WORK ONLY WITH REOLINK CAMERAS WITH CGI/API SUPPORT !!** \
+Please, take a look at the specifications of your camera on the Reolink official website
+
 ## First operation : 
 - go to @jasonk [gist.github webpage](https://gist.github.com/jasonk/4772d1cd5154069cfc9eed07acb2057a) and download his bash script named rl-api.
 - download it on your Home Automation Solution and make it as executable `chmod +x rl-api`
 
 ## Examples of features that you can control
 
+### Summary
+ 1. [PRIVACY MASK : How to create and set differents privacy masks for each PTZ Preset (PTZ cameras AI and NON-AI)](README.md#1-privacy-mask--how-to-create-and-set-differents-privacy-masks-for-each-ptz-preset-ptz-cameras-ai-and-non-ai)
+ 2. [DETECTION ZONE : How to create and set differents detection zone (PTZ Cameras AI and NON-AI)](README.md#2-detection-zone--how-to-create-and-set-differents-detection-zone-ptz-cameras-ai-and-non-ai)
+ 3. [VIDEO CLIP : How to create and set different zones of the main image as clips zones files and how to display one of these video clips zones (ALL Cameras)](README.md#3-video-clip--how-to-create-and-set-different-zones-of-the-main-image-as-clips-zones-files-and-how-to-display-one-of-these-video-clips-zones-all-cameras)
+
 ----
 
-### 1. **PRIVACY MASK : How to set differents privacy masks for each PTZ Preset (PTZ cameras AI and NON-AI)**
+### 1. **PRIVACY MASK : How to create and set differents privacy masks for each PTZ Preset (PTZ cameras AI and NON-AI)**
 
 For those which had a PTZ camera with PTZ Presets, generally you need to redefine your privacy mask to suit with your image of the preset when you move to another one and it's boring.
 
@@ -39,7 +47,7 @@ Here the method how to create several privacy masks and how to apply a new priva
 
 ----
 
-### 2. **DETECTION ZONE : How to set differents detection zone for the PTZ Cameras (AI and NON-AI)**
+### 2. **DETECTION ZONE : How to create and set differents detection zone (PTZ Cameras AI and NON-AI)**
 
 Like the method for the privacy masks in the post bellow, here the commands (depends on cameras types) to generate multiple detection zones on the preset you choose.
 
@@ -99,7 +107,7 @@ Here the method how to create several detection zones and how to apply a new det
 
 ----
 
-### 3. **VIDEO CLIP : How to create different zones of the main image as clips zones files and how to display one of these video clips zones, and after applying it, to focus on events of part of the main image**
+### 3. **VIDEO CLIP : How to create and set different zones of the main image as clips zones files and how to display one of these video clips zones (ALL Cameras)**
 
 On each Reolink cameras, you have the feature Video clip that permit to have a live zoom of part of the main image.
 
