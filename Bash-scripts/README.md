@@ -16,7 +16,7 @@ These examples are pretty useful when you can't define or configure some parmete
 
 For those which had a PTZ camera with PTZ Presets, generally you need to redefine your privacy mask to suit with your image of the preset when you move to another one and it's boring.
 
-Here the method how you can apply a new privacy mask after moving to a preset (**without losing the privacy masks specific to the other presets**)
+Here the method how to create several privacy masks and how to apply a new privacy mask after moving to a preset (**without losing the privacy masks specific to the other presets**)
 
 **Example** : Here, i have 3 presets for my PTZ camera (id1: -preset garage-, id2 : -preset entrance- and id:3 -preset road-)
 >
@@ -43,7 +43,7 @@ Here the method how you can apply a new privacy mask after moving to a preset (*
 
 Like the method for the privacy masks in the post bellow, here the commands (depends on cameras types) to generate multiple detection zones on the preset you choose.
 
-Here the method how you can apply a new detection zone after moving to a preset (without losing the others detection zones) :
+Here the method how to create several detection zones and how to apply a new detection zone after moving to a preset (**without losing the others detection zones**) :
 
 **Example :** Here, i have 2 presets (id1: -preset garage-, id2 : -preset entrance-)
 
@@ -86,7 +86,7 @@ Here the method how you can apply a new detection zone after moving to a preset 
 >- For the first one which your have defined a detection zone (in my example id:1 -garage-), launch the command bellow and save the result in a file called, for example, json_detectionzoneAI_pet_id1 : \
 >`./rl-api GetAiAlarm '{"channel":0,"ai_type":"people"}' | jq '{channel:.[].channel,md:.[].scope,people:.[].scope,vehicle:.[].scope,dog_cat:.[].scope}' -c > json_detectionzoneAI_pet_id1`
 >
->- Switch to the second preset -id:2- and redefined a new detection zone, apply it, and and also launch the command to saved the result in a second file called json_detectionzoneAI_pet_id2 : \
+>- Switch to the second preset -id:2- and redefined a new detection zone, apply it, and also launch the command to saved the result in a second file called json_detectionzoneAI_pet_id2 : \
 > `./rl-api GetAiAlarm '{"channel":0,"ai_type":"people"}' | jq '{channel:.[].channel,md:.[].scope,people:.[].scope,vehicle:.[].scope,dog_cat:.[].scope}' -c > json_detectionzoneAI_pet_id2`
 >
 >After that, when you trigger PTZ Preset by id with the command (taken for @pixeldoc2000) and in my case the id:2 -entrance- \
@@ -97,8 +97,42 @@ Here the method how you can apply a new detection zone after moving to a preset 
 
 **IMPORTANT** : all the files json_detectionzoneAI_pet_id**X** are located in the same repository of the rl-api executable.
 
+----
 
+### 3. **VIDEO CLIP : How to create different zones of the main image as clips zones files and how to display one of these video clips zones, and after applying it, to focus on events of part of the main image**
 
+On each Reolink cameras, you have the feature Video clip that permit to have a live zoom of part of the main image.
+
+In that section, you have the possibility to generate several video clip zones (to focus on some particular sectors of the main image). 
+
+After defining them, you are able to choose the video clip zone you want to looking at, and finally how to display this video clip live zoom stream through http(s) and rtmp live stream URLs 
+
+Here the method how to create several video clip zones and how to apply one of them for display it (**without losing the others video clip zones**) :
+
+**Example :** Here, i want to focus on two particular sectors of the main image (zone1 : Front door, zone2 : Letter box)
+
+>- For the first one (front door) which your have defined a video clip zone, launch the command bellow and save the result in a file called, for example, json_clip_frontdoor : \
+>./rl-api.sh GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_frontdoor
+>
+>- For the second one (letter box), modify the sector you want to see and apply it. After that, launch the command to saved the result in a second file called json_clip_letterbox : \
+>./rl-api.sh GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_letterbox
+>
+>When there is an event (doorbell ringing > view frontdoor zoom), launch the command dedicated to apply the json_clip_frontdoor file for zooming to the frontdoor: \
+>`./rl-api.sh SetCrop $(cat json_clip_frontdoor)`
+
+### HOW TO DISPLAY THE VIDEO CLIP : 
+
+There are 2 methods possibles to see the viceo clip zoom live stream :
+ - HTTP or HTTPS Url
+> `http(s)://#IP#/flv?port=1935&app=bcs&stream=channel0_mobile.bcs&user=#username#&password=#password#` \
+> (Remplace #IP#, #username#, #password# by your own values)
+ - RTMP
+> `rtmp://#IP#/bcs/channel0_mobile.bcs?channel=0&stream=0&user=#username#&password=#password#` \
+> (Remplace #IP#, #username#, #password# by your own values)
+
+**IMPORTANT** : 
+ - RTMP or HTTP(HTTPS) must be open on your camera to have a display of the sector you zoom to. In my example, the front door
+ - Verify if your home automation solution able to display one of these streams.
 
 
 
