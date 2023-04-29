@@ -11,6 +11,12 @@ Please, take a look at the specifications of your camera on the Reolink official
 - go to @jasonk [gist.github webpage](https://gist.github.com/jasonk/4772d1cd5154069cfc9eed07acb2057a) and download his bash script named rl-api.
 - download it on your Home Automation Solution and make it as executable `chmod +x rl-api`
 
+## Second operation : 
+- copy the script rl-api to another one that correspond to the camera IP (exmple, my IP finish by 60, so i rename ir rl-api60).
+- make it's new script as executable (for my exemple`chmod +x rl-api60`
+- edit the file rl-api (here rl-api60) and change aat the beginnig of the script your username, password and IP address of the camera (192.xxx.xxx.60).
+- Do the same thing for the others cameras.
+
 ## Examples of features that you can control
 
 ### Summary
