@@ -33,6 +33,8 @@ For those which had a PTZ camera with PTZ Presets, generally you need to redefin
 Here the method how to create several privacy masks and how to apply a new privacy mask after moving to a preset (**without losing the privacy masks specific to the other presets**)
 
 **Example** : Here, i have 3 presets for my PTZ camera (id1: -preset garage-, id2 : -preset entrance- and id:3 -preset road-)
+**!!IMPORTANT!!** use the right script that your camera depends on
+
 >
 > - For the first one which your have defined a privacy mask (in my example **id:1** -garage-), launch the command bellow and save the result in a file called, for example, json_mask_id1 : \
 >`./rl-api GetMask '{"channel":0}' | jq '.' -c > json_mask_id1`
@@ -60,6 +62,7 @@ Like the method for the privacy masks in the post bellow, here the commands (dep
 Here the method how to create several detection zones and how to apply a new detection zone after moving to a preset (**without losing the others detection zones**) :
 
 **Example :** Here, i have 2 presets (id1: -preset garage-, id2 : -preset entrance-)
+**!!IMPORTANT!!** Like the privacy mask, use the right script that your camera depends on
 
 ## FOR CAMERAS NON AI (like E1 Zoom) ##
 
@@ -124,6 +127,7 @@ After defining them, you are able to choose the video clip zone you want to look
 Here the method how to create several video clip zones and how to apply one of them for display it (**without losing the others video clip zones**) :
 
 **Example :** Here, i want to focus on two particular sectors of the main image (zone1 : Front door, zone2 : Letter box)
+**!!IMPORTANT!!** like the privacy mask, use the right script that your camera depends on
 
 >- For the first one (front door) which your have defined a video clip zone, launch the command bellow and save the result in a file called, for example, json_clip_frontdoor : \
 >`./rl-api.sh GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_frontdoor`
