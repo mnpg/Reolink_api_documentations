@@ -32,7 +32,7 @@ For those which had a PTZ camera with PTZ Presets, generally you need to redefin
 
 Here the method how to create several privacy masks and how to apply a new privacy mask after moving to a preset (**without losing the privacy masks specific to the other presets**)
 
-**Example** : Here, i have 3 presets for my PTZ camera (id1: -preset garage-, id2 : -preset entrance- and id:3 -preset road-)
+**Example** : Here, i have 3 presets for my PTZ camera (id1: -preset garage-, id2 : -preset entrance- and id:3 -preset road-) \
 **!!IMPORTANT!!** use the right script that your camera depends on
 
 >
@@ -62,7 +62,7 @@ Like the method for the privacy masks in the post bellow, here the commands (dep
 
 Here the method how to create several detection zones and how to apply a new detection zone after moving to a preset (**without losing the others detection zones**) :
 
-**Example :** Here, i have 2 presets (id1: -preset garage-, id2 : -preset entrance-)
+**Example :** Here, i have 2 presets (id1: -preset garage-, id2 : -preset entrance-) \
 **!!IMPORTANT!!** Like the privacy mask, use the right script that your camera depends on
 
 ## FOR CAMERAS NON AI (like E1 Zoom) ##
@@ -79,7 +79,7 @@ Here the method how to create several detection zones and how to apply a new det
 >Launch, after that previous command, the command dedicated to apply the detectionzone file for `id:2` : \
 >`./rl-api SetMdAlarm $(cat json_detectionzone_id2)`
 
-**IMPORTANT** : all the files json_detectionzone_idX are located in the same repository of the rl-api executable.
+**IMPORTANT** : all the files json_detectionzone_idX are located in the same repository of the rl-api executable. \
 **!!IMPORTANT!!** use the right script that your camera depends on
 
 
@@ -97,7 +97,7 @@ Here the method how to create several detection zones and how to apply a new det
 >Launch, after that previous command, the command dedicated to apply the json_detectionzoneAI file for `id:2` : \
 >`./rl-api SetAlarmArea $(cat json_detectionzoneAI_id2)`
 
-**IMPORTANT** : all the files json_detectionzoneAI_id**X** are located in the same repository of the rl-api executable.
+**IMPORTANT** : all the files json_detectionzoneAI_id**X** are located in the same repository of the rl-api executable. \
 **!!IMPORTANT!!** use the right script that your camera depends on
 
 
@@ -115,7 +115,7 @@ Here the method how to create several detection zones and how to apply a new det
 >Launch, after that previous command, the command dedicated to apply the json_detectionzoneAI_pet file for id:2 : \
 >`./rl-api SetAlarmArea $(cat json_detectionzoneAI_pet_id2)`
 
-**IMPORTANT** : all the files json_detectionzoneAI_pet_id**X** are located in the same repository of the rl-api executable.
+**IMPORTANT** : all the files json_detectionzoneAI_pet_id**X** are located in the same repository of the rl-api executable. \
 **!!IMPORTANT!!** use the right script that your camera depends on
 
 ----
@@ -130,7 +130,7 @@ After defining them, you are able to choose the video clip zone you want to look
 
 Here the method how to create several video clip zones and how to apply one of them for display it (**without losing the others video clip zones**) :
 
-**Example :** Here, i want to focus on two particular sectors of the main image (zone1 : Front door, zone2 : Letter box)
+**Example :** Here, i want to focus on two particular sectors of the main image (zone1 : Front door, zone2 : Letter box) \
 **!!IMPORTANT!!** like the privacy mask, use the right script that your camera depends on
 
 >- For the first one (front door) which your have defined a video clip zone, launch the command bellow and save the result in a file called, for example, json_clip_frontdoor : \
