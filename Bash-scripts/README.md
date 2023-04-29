@@ -14,7 +14,7 @@ Please, take a look at the specifications of your camera on the Reolink official
 ## Second operation : 
 - copy the script rl-api to another one that correspond to the camera IP (exmple, my IP finish by 60, so i rename it rl-api60).
 - make it's new script as executable (for my exemple`chmod +x rl-api60`)
-- edit the file rl-api (here rl-api60) and change aat the beginnig of the script your username, password and IP address of the camera (192.xxx.xxx.60).
+- edit the file rl-api (here rl-api60) and change at the beginnig of the script your username, password and IP address of the camera (192.xxx.xxx.60).
 - Do the same thing for the others cameras.
 
 ## Examples of features that you can control
