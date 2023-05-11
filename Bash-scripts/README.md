@@ -25,8 +25,9 @@ Please, take a look at the specifications of your camera on the Reolink official
  3. [VIDEO CLIP : How to create and set different zones of the main image as clips zones files and how to display one of these video clips zones (ALL Cameras)](README.md#3-video-clip--how-to-create-and-set-different-zones-of-the-main-image-as-clips-zones-files-and-how-to-display-one-of-these-video-clips-zones-all-cameras)
 
 ----
-
 ### 1. **PRIVACY MASK : How to create and set differents privacy masks for each PTZ Preset (PTZ cameras AI and NON-AI)**
+<details>
+<summary>HOW-TO detailed</summary>
 
 For those which had a PTZ camera with PTZ Presets, generally you need to redefine your privacy mask to suit with your image of the preset when you move to another one and it's boring.
 
@@ -53,10 +54,13 @@ Here the method how to create several privacy masks and how to apply a new priva
 
 **IMPORTANT :** all the files json_mask_id**X** are located in the same repository of the rl-api executable.
 **!!IMPORTANT!!** use the right script that your camera depends on
+</details>
 
 ----
 
 ### 2. **DETECTION ZONE : How to create and set differents detection zone (PTZ Cameras AI and NON-AI)**
+<details>
+<summary>HOW-TO detailed</summary>
 
 Like the method for the privacy masks in the post bellow, here the commands (depends on cameras types) to generate multiple detection zones on the preset you choose.
 
@@ -66,7 +70,9 @@ Here the method how to create several detection zones and how to apply a new det
 **!!IMPORTANT!!** Like the privacy mask, use the right script that your camera depends on
 
 ## FOR CAMERAS NON AI (like E1 Zoom) ##
-
+<details>
+<summary>HOW-TO detailed</summary>
+ 
 >- For the first one which your have defined a detection zone (in my example id:1 -garage-), launch the command bellow and save the result in a file called, for example, json_detectionzone_id1 : \
 >`./rl-api GetMdAlarm '{"channel":0}' | jq '.[]|={channel,scope}' -c > json_detectionzone_id1`
 >
@@ -81,10 +87,12 @@ Here the method how to create several detection zones and how to apply a new det
 
 **IMPORTANT** : all the files json_detectionzone_idX are located in the same repository of the rl-api executable. \
 **!!IMPORTANT!!** use the right script that your camera depends on
-
+</details>
 
 ## FOR CAMERAS AI (**without PetDetection**) : based on the same example
-
+<details>
+<summary>HOW-TO detailed</summary>
+ 
 >- For the first one which your have defined a detection zone (in my example id:1 -garage-), launch the command bellow and save the result in a file called, for example, json_detectionzoneAI_id1 : \
 >`./rl-api GetAiAlarm '{"channel":0,"ai_type":"people"}' | jq '{channel:.[].channel,md:.[].scope,people:.[].scope,vehicle:.[].scope}' -c > json_detectionzoneAI_id1`
 >
@@ -99,10 +107,12 @@ Here the method how to create several detection zones and how to apply a new det
 
 **IMPORTANT** : all the files json_detectionzoneAI_id**X** are located in the same repository of the rl-api executable. \
 **!!IMPORTANT!!** use the right script that your camera depends on
-
+</details>
 
 ## FOR CAMERAS AI (**_with PetDetection_**) : based on the same example
-
+<details>
+<summary>HOW-TO detailed</summary>
+ 
 >- For the first one which your have defined a detection zone (in my example id:1 -garage-), launch the command bellow and save the result in a file called, for example, json_detectionzoneAI_pet_id1 : \
 >`./rl-api GetAiAlarm '{"channel":0,"ai_type":"people"}' | jq '{channel:.[].channel,md:.[].scope,people:.[].scope,vehicle:.[].scope,dog_cat:.[].scope}' -c > json_detectionzoneAI_pet_id1`
 >
@@ -117,11 +127,15 @@ Here the method how to create several detection zones and how to apply a new det
 
 **IMPORTANT** : all the files json_detectionzoneAI_pet_id**X** are located in the same repository of the rl-api executable. \
 **!!IMPORTANT!!** use the right script that your camera depends on
+</details>
+</details>
 
 ----
 
 ### 3. **VIDEO CLIP : How to create and set different zones of the main image as clips zones files and how to display one of these video clips zones (ALL Cameras)**
-
+<details>
+<summary>HOW-TO detailed</summary>
+ 
 On each Reolink cameras, you have the feature Video clip that permit to have a live zoom of part of the main image.
 
 In that section, you have the possibility to generate several video clip zones (to focus on some particular sectors of the main image). 
@@ -143,7 +157,9 @@ Here the method how to create several video clip zones and how to apply one of t
 >`./rl-api.sh SetCrop $(cat json_clip_frontdoor)`
 
 ### HOW TO DISPLAY THE VIDEO CLIP : 
-
+<details>
+<summary>HOW-TO detailed</summary>
+ 
 There are 2 methods possibles to see the video clip zoom live stream :
  - HTTP or HTTPS Url
 > `http(s)://#IP#/flv?port=1935&app=bcs&stream=channel0_mobile.bcs&user=#username#&password=#password#` \
@@ -155,7 +171,8 @@ There are 2 methods possibles to see the video clip zoom live stream :
 **IMPORTANT** : 
  - RTMP or HTTP(HTTPS) must be open on your camera to have a display of the sector you zoom to. In my example, the front door
  - Verify if your home automation solution able to display one of these streams.
-
+</details>
+</details>
 
 
 
