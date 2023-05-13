@@ -25,6 +25,7 @@ Please, take a look at the specifications of your camera on the Reolink official
  1. [PRIVACY MASK : How to create and set differents privacy masks for each PTZ Preset (PTZ cameras AI and NON-AI)](README.md#1-privacy-mask--how-to-create-and-set-differents-privacy-masks-for-each-ptz-preset-ptz-cameras-ai-and-non-ai)
  2. [DETECTION ZONE : How to create and set differents detection zone (PTZ Cameras AI and NON-AI)](README.md#2-detection-zone--how-to-create-and-set-differents-detection-zone-ptz-cameras-ai-and-non-ai)
  3. [VIDEO CLIP : How to create and set different zones of the main image as clips zones files and how to display one of these video clips zones (ALL Cameras)](README.md#3-video-clip--how-to-create-and-set-different-zones-of-the-main-image-as-clips-zones-files-and-how-to-display-one-of-these-video-clips-zones-all-cameras)
+ 4. [SIREN ACTIVATION : manual mode or repetition mode](README.md#4-siren-activation--manual-mode-or-repetition-mode)
 
 ----
 ### 1. **PRIVACY MASK : How to create and set differents privacy masks for each PTZ Preset (PTZ cameras AI and NON-AI)**
@@ -150,13 +151,13 @@ Here the method how to create several video clip zones and how to apply one of t
 **!!IMPORTANT!!** like the privacy mask, use the right script that your camera depends on
 
 >- For the first one (front door) which your have defined a video clip zone, launch the command bellow and save the result in a file called, for example, json_clip_frontdoor : \
->`./rl-api.sh GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_frontdoor`
+>`./rl-api GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_frontdoor`
 >
 >- For the second one (letter box), modify the sector you want to see and apply it. After that, launch the command to saved the result in a second file called json_clip_letterbox : \
->`./rl-api.sh GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_letterbox`
+>`./rl-api GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_letterbox`
 >
 >When there is an event (doorbell ringing > view frontdoor zoom), launch the command dedicated to apply the json_clip_frontdoor file for zooming to the frontdoor: \
->`./rl-api.sh SetCrop $(cat json_clip_frontdoor)`
+>`./rl-api SetCrop $(cat json_clip_frontdoor)`
 
 ### HOW TO DISPLAY THE VIDEO CLIP : 
 <details>
@@ -178,19 +179,19 @@ There are 2 methods possibles to see the video clip zoom live stream :
 
 ----
 
-### 4. Siren activation : mode manual or mode repetition
+### 4. SIREN ACTIVATION : manual mode or repetition mode
 <details>
 <summary>HOW-TO detailed</summary>
 
- For those how have a recent cameras (AI) There are 2 modes for triggering the siren : the manual mode and the repetition mode. Here are the methos do to this depends on what you want. \
+ For those which have a recent cameras (AI) There are 2 modes for triggering the siren : the manual mode and the repetition mode. Here are the methods to use these, depends on what you want. \
  **!! IMPORTANT !!** : these commands do not work with non AI cameras because this command isn't included in their firmware.
  
  **SIREN in manual mode**\
- -> turn the siren ON\
- `./rl-api.sh AudioAlarmPlay '{"alarm_mode": "manul", "manual_switch": 0, "channel": 0 }'`
+ → turn the siren ON\
+ `./rl-api AudioAlarmPlay '{"alarm_mode": "manul", "manual_switch": 0, "channel": 0 }'`
 
- -> turn the siren OFF\
-`./rl-api.sh AudioAlarmPlay '{"alarm_mode": "manul", "manual_switch": 1, "channel": 0 }'`
+ → turn the siren OFF\
+`./rl-api AudioAlarmPlay '{"alarm_mode": "manul", "manual_switch": 1, "channel": 0 }'`
 
  **SIREN in repetition mode** 
  
