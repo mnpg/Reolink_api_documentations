@@ -138,7 +138,7 @@ Here the method how to create several detection zones and how to apply a new det
 <details>
 <summary>HOW-TO detailed</summary>
  
-On each Reolink cameras, you have the feature Video clip that permit to have a live zoom of part of the main image.
+On each Reolink cameras, you have the feature Video clip that permit to have a li.e zoom of part of the main image.
 
 In that section, you have the possibility to generate several video clip zones (to focus on some particular sectors of the main image). 
 
@@ -176,5 +176,26 @@ There are 2 methods possibles to see the video clip zoom live stream :
 </details>
 </details>
 
+----
 
+### 4. Siren activation : mode manual or mode repetition
+<details>
+<summary>HOW-TO detailed</summary>
+
+ For those how have a recent cameras (AI) There are 2 modes for triggering the siren : the manual mode and the repetition mode. Here are the methos do to this depends on what you want. \
+ **!! IMPORTANT !!** : these commands do not work with non AI cameras because this command isn't included in their firmware.
+ 
+ **SIREN in manual mode**
+ -> turn the siren ON
+./rl-api.sh AudioAlarmPlay '{"alarm_mode": "manul", "manual_switch": 0, "channel": 0 }'
+
+ -> turn the siren OFF
+./rl-api.sh AudioAlarmPlay '{"alarm_mode": "manul", "manual_switch": 1, "channel": 0 }'
+
+ **SIREN in repetition mode** 
+ 
+In the command below, change **#NBER_SECONDS#** by the time in seconds you want to hear the siren (example : 10 → 10 seconds)
+
+./rl-api AudioAlarmPlay '{"channel":0,"alarm_mode":"times","times":#NBER_SECONDS#}'
+</details>
 
