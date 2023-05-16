@@ -25,7 +25,7 @@ Please, take a look at the specifications of your camera on the Reolink official
  1. [PRIVACY MASK : How to create and set differents privacy masks for each PTZ Preset (PTZ cameras AI and NON-AI)](README.md#1-privacy-mask--how-to-create-and-set-differents-privacy-masks-for-each-ptz-preset-ptz-cameras-ai-and-non-ai)
  2. [DETECTION ZONE : How to create and set differents detection zone (PTZ Cameras AI and NON-AI)](README.md#2-detection-zone--how-to-create-and-set-differents-detection-zone-ptz-cameras-ai-and-non-ai)
  3. [VIDEO CLIP : How to create and set different zones of the main image as clips zones files and how to display one of these video clips zones (ALL Cameras)](README.md#3-video-clip--how-to-create-and-set-different-zones-of-the-main-image-as-clips-zones-files-and-how-to-display-one-of-these-video-clips-zones-all-cameras)
- 4. [SIREN ACTIVATION : manual mode or repetition mode](README.md#4-siren-activation--manual-mode-or-repetition-mode)
+ 4. [SIREN ACTIVATION : manual mode or repeat mode](README.md#4-siren-activation--manual-mode-or-repeat-mode)
 
 ----
 ### 1. **PRIVACY MASK : How to create and set differents privacy masks for each PTZ Preset (PTZ cameras AI and NON-AI)**
@@ -179,11 +179,11 @@ There are 2 methods possibles to see the video clip zoom live stream :
 
 ----
 
-### 4. SIREN ACTIVATION : manual mode or repetition mode
+### 4. SIREN ACTIVATION : manual mode or repeat mode
 <details>
 <summary>HOW-TO detailed</summary>
 
- For those which have a recent cameras (AI) There are 2 modes for triggering the siren : the manual mode and the repetition mode. Here are the methods to use these, depends on what you want. \
+ For those which have a recent cameras (AI) There are 2 modes for triggering the siren : the manual mode and the repeat mode. Here are the methods to use these, depends on what you want. \
  **!! IMPORTANT !!** : these commands do not work with non AI cameras because this command isn't included in their firmware.
  
  **SIREN in manual mode**\
@@ -193,10 +193,19 @@ There are 2 methods possibles to see the video clip zoom live stream :
  → turn the siren OFF\
 `./rl-api AudioAlarmPlay '{"alarm_mode": "manul", "manual_switch": 1, "channel": 0 }'`
 
- **SIREN in repetition mode** 
+ **SIREN in repeat mode** 
  
 In the command below, change **#NBER_SECONDS#** by the time in seconds you want to hear the siren (example : 10 → 10 seconds)
 
 `./rl-api AudioAlarmPlay '{"channel":0,"alarm_mode":"times","times":#NBER_SECONDS#}'`
 </details>
 
+----
+
+### 4. NTP : Force synchronization
+<details>
+<summary>HOW-TO detailed</summary>
+
+ **SIREN in manual mode**\
+ → turn the siren ON\
+ `./rl-api AudioAlarmPlay '{"alarm_mode": "manul", "manual_switch": 0, "channel": 0 }'`
