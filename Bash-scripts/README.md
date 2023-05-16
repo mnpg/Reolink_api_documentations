@@ -206,6 +206,5 @@ In the command below, change **#NBER_SECONDS#** by the time in seconds you want 
 <details>
 <summary>HOW-TO detailed</summary>
 
- **SIREN in manual mode**\
- → turn the siren ON\
- `./rl-api AudioAlarmPlay '{"alarm_mode": "manul", "manual_switch": 0, "channel": 0 }'`
+ → Force NTP synchronization\
+ `./rl-api SetNtp $(./rl-api GetNtp {"channel":0} | jq '.Ntp.interval = 0' -c)`
