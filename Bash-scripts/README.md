@@ -26,6 +26,7 @@ Please, take a look at the specifications of your camera on the Reolink official
  2. [DETECTION ZONE : How to create and set differents detection zone (PTZ Cameras AI and NON-AI)](README.md#2-detection-zone--how-to-create-and-set-differents-detection-zone-ptz-cameras-ai-and-non-ai)
  3. [VIDEO CLIP : How to create and set different zones of the main image as clips zones files and how to display one of these video clips zones (ALL Cameras)](README.md#3-video-clip--how-to-create-and-set-different-zones-of-the-main-image-as-clips-zones-files-and-how-to-display-one-of-these-video-clips-zones-all-cameras)
  4. [SIREN ACTIVATION : manual mode or repeat mode](README.md#4-siren-activation--manual-mode-or-repeat-mode)
+ 5. [NTP : Force synchronization](README.md#4-ntp--force-synchronization)
 
 ----
 ### 1. **PRIVACY MASK : How to create and set differents privacy masks for each PTZ Preset (PTZ cameras AI and NON-AI)**
