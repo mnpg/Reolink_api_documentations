@@ -140,7 +140,7 @@ Here the method how to create several detection zones and how to apply a new det
 <details>
 <summary>HOW-TO detailed</summary>
  
-On each Reolink cameras, you have the feature Video clip that permit to have a li.e zoom of part of the main image.
+On each Reolink cameras, you have the feature Video clip that permit to have a live zoom of part of the main image.
 
 In that section, you have the possibility to generate several video clip zones (to focus on some particular sectors of the main image). 
 
