@@ -58,6 +58,12 @@ Here the method how to create several privacy masks and how to apply a new priva
 
 **IMPORTANT :** all the files json_mask_id**X** are located in the same repository of the rl-api executable.
 **!!IMPORTANT!!** use the right script that your camera depends on
+
+
+**NB :** If you need to activate/desactivate mask privacy ONLY, here is the command : 
+
+>`./rl-api SetMask '{"channel":0, "enable":1}' ` -> to enable the privacy mask\
+>`./rl-api SetMask '{"channel":0, "enable":0}' ` -> to disable the privacy mask
 </details>
 
 ----
