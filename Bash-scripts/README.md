@@ -33,6 +33,7 @@ Please, take a look at the specifications of your camera on the Reolink official
 <details>
 <summary>HOW-TO detailed</summary>
 
+> __Warning__ \
 **EDIT :** This method doesn't work with TrackMix Cameras (or Cameras that Privacy Mask options are : Wide-Angle Image AND Telephoto Image)
  
 For those which had a PTZ camera with PTZ Presets, generally you need to redefine your privacy mask to suit with your image of the preset when you move to another one and it's boring.
@@ -40,6 +41,8 @@ For those which had a PTZ camera with PTZ Presets, generally you need to redefin
 Here the method how to create several privacy masks and how to apply a new privacy mask after moving to a preset (**without losing the privacy masks specific to the other presets**)
 
 **Example** : Here, i have 3 presets for my PTZ camera (id1: -preset garage-, id2 : -preset entrance- and id:3 -preset road-) \
+
+> __Warning__ \
 **!!IMPORTANT!!** use the right script that your camera depends on
 
 >
@@ -58,9 +61,10 @@ Here the method how to create several privacy masks and how to apply a new priva
 >Launch, after that previous command, the command dedicated to apply the privacy mask file for id:2 : \
 >`./rl-api SetMask $(cat json_mask_id2)`
 
-**IMPORTANT :** all the files json_mask_id**X** are located in the same repository of the rl-api executable.
-**!!IMPORTANT!!** use the right script that your camera depends on
-
+> __Warning__ \
+ **IMPORTANT :** 
+   * all the files json_mask_id**X** are located in the same repository of the rl-api executable.
+   * use the right script that your camera depends on
 
 **NB :** If you need to activate/desactivate mask privacy ONLY, here is the command : 
 
