@@ -33,6 +33,8 @@ Please, take a look at the specifications of your camera on the Reolink official
 <details>
 <summary>HOW-TO detailed</summary>
 
+**EDIT :** This method doesn't work with TrackMix Cameras (or Cameras that Privacy Mask options are : Wide-Angle Image AND Telephoto Image)
+ 
 For those which had a PTZ camera with PTZ Presets, generally you need to redefine your privacy mask to suit with your image of the preset when you move to another one and it's boring.
 
 Here the method how to create several privacy masks and how to apply a new privacy mask after moving to a preset (**without losing the privacy masks specific to the other presets**)
