@@ -142,20 +142,26 @@ Here the method how to create several detection zones and how to apply a new det
 
 ----
 
-### 3. **VIDEO CLIP : How to create and set different zones of the main image as clips zones files and how to display one of these video clips zones (ALL Cameras)**
+### 3. **VIDEO CLIP : How to create and set different zones of the main image as clips zones files and how to display one of these video clips zones ~~(ALL Cameras)~~**
 <details>
 <summary>HOW-TO detailed</summary>
  
-On each Reolink cameras, you have the feature Video clip that permit to have a live zoom of part of the main image.
+On Reolink cameras (not all), you have the feature Video clip that permit to have a live zoom of part of the main image.
 
 In that section, you have the possibility to generate several video clip zones (to focus on some particular sectors of the main image). 
 
 After defining them, you are able to choose the video clip zone you want to looking at, and finally how to display this video clip live zoom stream through http(s) and rtmp live stream URLs 
 
 Here the method how to create several video clip zones and how to apply one of them for display it (**without losing the others video clip zones**) :
+ 
+**!! VERY IMPORTANT !!** : To verify if your camera support videoclip, type that command command : 
+ > `./rl-api22.sh GetCrop '{"channel":0}'`
+If you get one of these return message below, you camera do not support videoclips :  
+ > GetCrop ERROR: ability error (-26)
+ > GetCrop ERROR: unknown (-9)
 
 **Example :** Here, i want to focus on two particular sectors of the main image (zone1 : Front door, zone2 : Letter box) \
-**!!IMPORTANT!!** like the privacy mask, use the right script that your camera depends on
+**!! IMPORTANT !!** like the privacy mask, use the right script that your camera depends on
 
 >- For the first one (front door) which your have defined a video clip zone, launch the command bellow and save the result in a file called, for example, json_clip_frontdoor : \
 >`./rl-api GetCrop '{"channel":0}' | jq '.[]|=.*{"screenHeight":.mainHeight,"screenWidth":.mainWidth}|del(.Crop.minHeight,.Crop.minWidth)' -c > json_clip_frontdoor`
