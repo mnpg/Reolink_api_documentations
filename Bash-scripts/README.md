@@ -227,4 +227,4 @@ In the command below, change **#NBER_SECONDS#** by the time in seconds you want 
 <summary>HOW-TO detailed</summary>
 
  → Force NTP synchronization\
- `./rl-api SetNtp $(./rl-api GetNtp {"channel":0} | jq '.Ntp.interval = 0' -c)`
+ `./rl-api SetNtp $(./rl-api GetNtp '{"channel":0}' | jq '.Ntp.interval = 0' -c)`
