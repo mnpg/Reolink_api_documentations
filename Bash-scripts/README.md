@@ -222,7 +222,7 @@ In the command below, change **#NBER_SECONDS#** by the time in seconds you want 
 
 ----
 
-### 4. NTP : Force synchronization
+### 5. NTP : Force synchronization
 <details>
 <summary>HOW-TO detailed</summary>
 
