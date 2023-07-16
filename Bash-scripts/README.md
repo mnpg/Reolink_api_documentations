@@ -7,8 +7,8 @@ These examples are pretty useful when you can't define or configure some paramet
 **!! THESE EXAMPLES WORK ONLY WITH REOLINK CAMERAS WITH CGI/API SUPPORT !!** \
 Please, take a look at the specifications of your camera on the Reolink official website
 
-**!!IMPORTANT!! 
-- these scripts work with standalone cameras - They aren't tested with NVR or binocular cameras**
+**!!IMPORTANT!!** 
+- these scripts work with standalone cameras - **They aren't tested with NVR or binocular cameras**
 - these scripts work on linux OS
 
 ## First operation :
