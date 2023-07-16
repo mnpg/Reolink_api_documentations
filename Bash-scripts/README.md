@@ -7,10 +7,13 @@ These examples are pretty useful when you can't define or configure some paramet
 **!! THESE EXAMPLES WORK ONLY WITH REOLINK CAMERAS WITH CGI/API SUPPORT !!** \
 Please, take a look at the specifications of your camera on the Reolink official website
 
-**!!IMPORTANT!! these scripts work with standalone cameras - They aren't tested with NVR or binocular cameras**
+**!!IMPORTANT!! 
+- these scripts work with standalone cameras - They aren't tested with NVR or binocular cameras**
+- these scripts work on linux OS
 
-## First operation : 
+## First operation :
 - go to @jasonk [gist.github webpage](https://gist.github.com/jasonk/4772d1cd5154069cfc9eed07acb2057a) and download his bash script named rl-api.
+- dependencies for the script : executables curl and jq.
 - download it on your Home Automation Solution and make it as executable `chmod +x rl-api`
 
 ## Second operation : 
