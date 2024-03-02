@@ -2,7 +2,7 @@
 
 Two kind of documentations
  * Official folder : documentations taken from differents sources.
- * Unofficial folder : unofficial documentations based on 5MP Reolink cameras (AI and not AI)
+ * Unofficial folder : unofficial documentations based on 5MP Reolink cameras (AI and not AI) -sorry, all the documentations are in french but easy to translate-
 
 AND
 
