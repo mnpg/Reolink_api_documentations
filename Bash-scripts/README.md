@@ -197,6 +197,7 @@ There are 2 methods possibles to see the video clip zoom live stream :
 **IMPORTANT** : 
  - RTMP or HTTP(HTTPS) must be open on your camera to have a display of the sector you zoom to. In my example, the front door
  - Verify if your home automation solution able to display one of these streams.
+ - When you restart your camera, the video clip zone is reset to the default clip zone
 </details>
 </details>
 
